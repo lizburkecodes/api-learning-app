@@ -1,24 +1,44 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, NavLink } from 'react-router-dom'
 import './App.css'
 
-import WhatIsApi from './pages/WhatIsApi'
+import WhatIsApi from './pages/ApiDefinition'
 import HowApisWork from './pages/HowApisWork'
 import BuildRequest from './pages/BuildRequest'
 import ReadResponse from './pages/ReadResponse'
 import TryIt from './pages/TryIt'
 
+const lessons = [
+  { path: '/', label: 'What is an API', end: true },
+  { path: '/how-apis-work', label: 'How APIs Work' },
+  { path: '/build-request', label: 'Build a Request' },
+  { path: '/read-response', label: 'Read the Response' },
+  { path: '/try-it', label: 'Try It' },
+]
+
 function App() {
   return (
     <div className="app-shell">
       <header className="top-bar">
-        <h1>Learn APIs</h1>
+        <div className="title-group">
+          <h1>Learn APIs</h1>
+          <p>A beginner-friendly guide to understanding API requests and responses.</p>
+        </div>
 
-        <nav className="nav-links">
-          <Link to="/">What is an API</Link>
-          <Link to="/how-apis-work">How APIs Work</Link>
-          <Link to="/build-request">Build a Request</Link>
-          <Link to="/read-response">Read the Response</Link>
-          <Link to="/try-it">Try It</Link>
+        <nav className="progress-nav" aria-label="Lesson navigation">
+          {lessons.map((lesson, index) => (
+            <div className="progress-step" key={lesson.path}>
+              <NavLink
+                to={lesson.path}
+                end={lesson.end}
+                className={({ isActive }) =>
+                  isActive ? 'step-link active' : 'step-link'
+                }
+              >
+                <span className="step-number">{index + 1}</span>
+                <span className="step-label">{lesson.label}</span>
+              </NavLink>
+            </div>
+          ))}
         </nav>
       </header>
 

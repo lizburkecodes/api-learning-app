@@ -1,0 +1,11 @@
+html {
+  font-size: 19px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.65;
+  color: #0f172a;
+  background: #f8fafc;
+}
