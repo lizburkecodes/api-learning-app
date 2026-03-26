@@ -1,0 +1,36 @@
+.app-shell {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.top-bar {
+  padding: 24px 32px;
+  border-bottom: 1px solid #e2e8f0;
+  background: white;
+}
+
+.top-bar h1 {
+  margin: 0 0 16px;
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.page-content {
+  padding: 32px;
+}
