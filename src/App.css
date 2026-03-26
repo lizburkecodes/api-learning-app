@@ -266,8 +266,8 @@
   margin: 0 0 6px;
   color: #e2e8f0;
 }
-/* Build a Request Styles */
 
+/* Build a Request Styles */
 .request-builder {
   display: flex;
   flex-direction: column;
@@ -358,4 +358,46 @@
   word-break: break-word;
   font-family: monospace;
   line-height: 1.6;
+}
+
+/* Read Response Styles */
+.response-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 20px 0 32px;
+}
+
+.response-panel {
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #f8fafc;
+}
+
+.example-box.success {
+  border: 1px solid #22c55e;
+}
+
+.example-box.error {
+  border: 1px solid #ef4444;
+}
+
+.header-group {
+  margin-top: 14px;
+}
+
+.header-group-title {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subtle-note {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 8px;
 }
